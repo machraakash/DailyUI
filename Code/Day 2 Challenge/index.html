@@ -1,11 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Credit Card Checkout</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <style>
+    body {
+      background-color: #f27bbd;
+      font-family: "Montserrat", sans-serif;
+      color: antiquewhite;
+    }
+
+    .flexbox-1 {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: 97vh;
+    }
+
+    .flexbox-2 {
+      background-color: green;
+      display: flex;
+      border-top-left-radius: 30px;
+      border-bottom-left-radius: 30px;
+      flex-direction: column;
+      background-color: #874ccc;
+      padding: 29px;
+      min-width: 310px;
+      justify-content: center;
+      height: 70vh;
+      width: 30vw;
+    }
+
+    .centre-text {
+      display: flex;
+      justify-content: center;
+      font-size: 30px;
+      border-bottom: darkslategray 1px solid;
+      padding-bottom: 20px;
+      margin-bottom: 0px;
+    }
+
+    .item-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      border-bottom: darkslategray 1px solid;
+      align-items: center;
+      height: 15vh;
+    }
+
+    .img {
+      border-radius: 20px;
+      height: 100px;
+      width: 100px;
+      flex: 1;
+    }
+
+    .order-text {
+      margin-top: 20px;
+      flex: 3;
+      margin-left: 25px;
+    }
+
+    .top-order-text {
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    .middle-order-text {
+      font-size: medium;
+      font-weight: 500;
+      margin-top: -5%;
+      margin-bottom: -2%;
+    }
+
+    .lower-order-text {
+      font-size: small;
+      padding-bottom: 30px;
+    }
+
+    .price {
+      height: 0vh;
+      flex: 0.85;
+    }
+
+    .flexbox-3 {
+      margin-top: 1vh;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .additional-price {
+      margin-left: 1px;
+    }
+
+    .flexbox-4 {
+      background-color: green;
+      display: flex;
+      border-top-right-radius: 30px;
+      border-bottom-right-radius: 30px;
+      flex-direction: column;
+      background-color: #10439f;
+      padding: 29px;
+      justify-content: space-evenly;
+      height: 70vh;
+      width: 30vw;
+      min-width: 260px;
+    }
+
+    .grid-1 {
+      border-radius: 5px;
+      display: grid;
+      grid-template: 0.5fr 2fr 1fr 1fr 1fr 1fr / 1fr 1fr;
+    }
+    .hdfc{
+      grid-area: 2/1/3/3;
+      display: flex;
+      align-items: center;
+    }
+    .number{
+      grid-area: 3/1/4/3;
+    }
+    .holder{
+      grid-area: 4/1/5/3;
+    }
+    .checkout{
+      grid-area: 6/1/7/3;
+    }
+  </style>
 </head>
+
 <body>
-    
+  <div class="flexbox-1">
+    <div class="flexbox-2">
+      <p class="centre-text">Order Summary</p>
+      <div class="item-row">
+        <img class="img" src="./Images/charger.jpg" alt="Charger Image" />
+        <div class="order-text">
+          <p class="top-order-text">Anker</p>
+          <p class="middle-order-text">2-Port Wall Charger</p>
+          <p class="lower-order-text">Color: White, Size: Small. $25</p>
+        </div>
+        <div class="price">
+          <p>Rs. 2,199/-</p>
+        </div>
+      </div>
+      <div class="item-row">
+        <img class="img" src="./Images/back-cover.jpg" alt="Back Cover Image" />
+        <div class="order-text">
+          <p class="top-order-text">Fablue</p>
+          <p class="middle-order-text">Back Cover</p>
+          <p class="lower-order-text">Color: Black, Size: Medium</p>
+        </div>
+        <div class="price">
+          <p>Rs. 299/-</p>
+        </div>
+      </div>
+      <div class="item-row">
+        <img class="img" src="./Images/hard-disk-shell.jpg" alt="Hard Disk Image" />
+        <div class="order-text">
+          <p class="top-order-text">PiBOX India</p>
+          <p class="middle-order-text">HDD Docking Station</p>
+          <p class="lower-order-text">Color: Black, Size: Large</p>
+        </div>
+        <div class="price">
+          <p>Rs. 1,099/-</p>
+        </div>
+      </div>
+      <div class="flexbox-3">
+        <div>
+          <h5>VAT @ 19%</h5>
+          <h4>Delivery</h4>
+          <h3>Total</h3>
+        </div>
+        <div class="additional-price">
+          <h5>Rs. 684/-</h5>
+          <h4>Rs. 100/-</h4>
+          <h3>Rs. 4,381/-</h3>
+        </div>
+      </div>
+    </div>
+    <div class="flexbox-4">
+      <div class="grid-1">
+        <div>
+          Please select your card:
+        </div>
+        <div>Dropdown</div>
+        <div class="hdfc"><img class="img" src="./Images/HDFC.avif"></div>
+        <div class="number">Card Number</div>
+        <div class="holder">Card Holder</div>
+        <div>Expires</div>
+        <div>CVC</div>
+        <div class="checkout">Checkout</div>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>
