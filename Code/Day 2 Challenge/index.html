@@ -56,11 +56,11 @@
       height: 15vh;
     }
 
-    .img {
+    .item-img {
       border-radius: 20px;
       height: 100px;
       width: 100px;
-      flex: 1;
+      /* flex: 1; */
     }
 
     .order-text {
@@ -119,21 +119,81 @@
     .grid-1 {
       border-radius: 5px;
       display: grid;
-      grid-template: 0.5fr 2fr 1fr 1fr 1fr 1fr / 1fr 1fr;
+      grid-template: 1fr 2fr 1fr 1fr 1fr 1fr / 1fr 1fr;
     }
-    .hdfc{
+
+    .hdfc-input {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      width: 100%;
+      border: 2px solid white;
+      border-radius: 4px;
+      padding: 10px 0px;
+      background-color: #10439f;
+      color: white;
+      font-size: 18px;
+    }
+
+    .bank-dropdown {
+      border: 2px solid white;
+      border-radius: 4px;
+      width: 100%;
+      background-color: #10439f;
+      color: white;
+      font-size: 18px;
+    }
+
+    .hdfc {
       grid-area: 2/1/3/3;
       display: flex;
+      justify-content: center;
       align-items: center;
     }
-    .number{
+
+    .hdfc-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 20px;
+    }
+
+    .number {
       grid-area: 3/1/4/3;
     }
-    .holder{
+
+    .holder-name {
       grid-area: 4/1/5/3;
     }
-    .checkout{
+
+    .expiry {
+      grid-area: 5/1/6/2;
+      margin-right: 10px;
+    }
+
+    .cvc {
+      grid-area: 5/2/6/3;
+      margin-left: 5px;
+    }
+
+    .checkout {
       grid-area: 6/1/7/3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .button-checkout{
+      background-color: #10439f;
+      color: white;
+      width: 50%;
+      height: 50%;
+      border: 2px solid white;
+      border-radius: 20px;
+      /* height: ; */
+    }
+
+    .button-checkout:hover {
+      background-color: #008CBA;
+      color: white;
     }
   </style>
 </head>
@@ -143,7 +203,7 @@
     <div class="flexbox-2">
       <p class="centre-text">Order Summary</p>
       <div class="item-row">
-        <img class="img" src="./Images/charger.jpg" alt="Charger Image" />
+        <img class="item-img" src="./Images/charger.jpg" alt="Charger Image" />
         <div class="order-text">
           <p class="top-order-text">Anker</p>
           <p class="middle-order-text">2-Port Wall Charger</p>
@@ -154,7 +214,7 @@
         </div>
       </div>
       <div class="item-row">
-        <img class="img" src="./Images/back-cover.jpg" alt="Back Cover Image" />
+        <img class="item-img" src="./Images/back-cover.jpg" alt="Back Cover Image" />
         <div class="order-text">
           <p class="top-order-text">Fablue</p>
           <p class="middle-order-text">Back Cover</p>
@@ -165,7 +225,7 @@
         </div>
       </div>
       <div class="item-row">
-        <img class="img" src="./Images/hard-disk-shell.jpg" alt="Hard Disk Image" />
+        <img class="item-img" src="./Images/hard-disk-shell.jpg" alt="Hard Disk Image" />
         <div class="order-text">
           <p class="top-order-text">PiBOX India</p>
           <p class="middle-order-text">HDD Docking Station</p>
@@ -193,13 +253,43 @@
         <div>
           Please select your card:
         </div>
-        <div>Dropdown</div>
-        <div class="hdfc"><img class="img" src="./Images/HDFC.avif"></div>
-        <div class="number">Card Number</div>
-        <div class="holder">Card Holder</div>
-        <div>Expires</div>
-        <div>CVC</div>
-        <div class="checkout">Checkout</div>
+        <div>
+          <form>
+            <select class="bank-dropdown" name="country">
+              <option value="au">HDFC</option>
+              <option value="ca">Axis</option>
+              <option value="usa">SBI</option>
+            </select>
+          </form>
+        </div>
+        <div class="hdfc"><img class="hdfc-img" src="./Images/HDFC.avif"></div>
+        <div class="number">
+          <form>
+            <label for="fname">Card Number:</label><br>
+            <input class="hdfc-input" type="text" id="Cnumber" name="fname"><br>
+          </form>
+        </div>
+        <div class="holder-name">
+          <form>
+            <label for="fname">Holder Name:</label><br>
+            <input class="hdfc-input" type="text" id="Hname" name="fname"><br>
+          </form>
+        </div>
+        <div class="expiry">
+          <form>
+            <label for="fname">Expiry Date:</label><br>
+            <input class="hdfc-input" type="text" id="Expiry" name="fname"><br>
+          </form>
+        </div>
+        <div class="cvc">
+          <form>
+            <label for="fname">CVC:</label><br>
+            <input class="hdfc-input" type="text" id="CVC" name="fname"><br>
+          </form>
+        </div>
+        <div class="checkout">
+          <input class="button-checkout" type="submit" value="Checkout">
+        </div>
       </div>
     </div>
   </div>
