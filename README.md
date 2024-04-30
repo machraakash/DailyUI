@@ -26,3 +26,12 @@ Image 1 - Monitor Display
 Image 2 - Mobile Display
 
 ![Mobile Display](https://github.com/machraakash/DailyUI/assets/34833061/6c2271ed-60a4-4723-ac22-9c674418e540)
+
+Day 3 - **Prompt: Landing Page**
+
+What's the main focus? Is it for a book, an album, a mobile app, a SaaS product? Consider important landing page elements (Headlines, call-to-action buttons, typography, clarity, etc.)
+
+_Created a responsive UI using Bootstrap_.
+
+Image 1 - Monitor Display
+![Final PC](https://github.com/machraakash/DailyUI/assets/34833061/61249be0-20dc-4f06-865e-1c4263154cfb)
