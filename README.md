@@ -35,3 +35,15 @@ _Created a responsive UI using Bootstrap_.
 
 Image 1 - Monitor Display
 ![Final PC](https://github.com/machraakash/DailyUI/assets/34833061/61249be0-20dc-4f06-865e-1c4263154cfb)
+
+
+**Prompt: User Profile**
+
+Design a user profile and be mindful of the most important data, names, imagery, placement, etc. Is it for a serious profile? A social profile? (It's up to you!)
+
+_Created a responsive UI using Bootstrap_.
+
+Image - 
+
+![image](https://github.com/machraakash/DailyUI/assets/34833061/bcebdb8f-cb0a-4748-a769-d8933ac6b5a6)
+
